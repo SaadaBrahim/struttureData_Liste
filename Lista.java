@@ -3,6 +3,7 @@ int size;
 Nodo cursore;
 Nodo primoRiferimento;
 
+
 //Getter&Setter
 
 public int getSize() {
@@ -31,7 +32,7 @@ public void setPrimoRiferimento(Nodo primoRiferimento) {
     this.primoRiferimento = primoRiferimento;
 }
 
-public void inserisci(Nodo){
+public void Accoda(Nodo){
 
 }
 
@@ -39,8 +40,15 @@ public void elimina(Nodo){
 
 }
 
-public void visita(Nodo){
+public Nodo visita() {
+    if (cursore == null) {
+        return null;
+    }
 
+    Nodo nodoCorrente = cursore;
+    cursore = cursore.getNext();
+    return nodoCorrente;
 }
+
 
 }
